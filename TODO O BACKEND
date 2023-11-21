@@ -1,0 +1,1506 @@
+TODO O BACKEND
+
+SWITCH
+
+deixe eu = 0
+enquanto(eu < 9) {
+    console.log(i);
+
+    eu++
+
+}
+
+
+~
+
+
+deixe eu = 0
+enquanto(eu < 9) {
+    console.log(i);
+
+    eu++
+
+}
+
+
+~
+
+import*as leitor from "readline-sync"
+let menu : Boolean = true 
+while (menu){
+    let opcao : String = leitor.questionInt("informe uma cor ou digite 'sair' para fechar :").tolowercase()
+
+    switch(opcao){
+        case 'amarelo':
+        console.log('amarelo me lembra a primavera ');
+          break;
+        case 'sair':
+            console.log('saindo');
+          break;
+          default:
+            console.log('opcao inexistente');
+            break
+            
+          
+              
+
+        
+    }
+}
+
+
+~
+
+import * as leitor from "readline-sync"
+
+let menu: Boolean = true
+while(menu){
+    let option = leitor.questionInt("Informe um número de 1 a 12 ou 0 para Sair")
+    switch(option){
+        case 1:
+            console.log('Janeiro');
+            break;
+        case 2:
+            console.log('Fevereiro');
+            break;
+        case 3:
+            console.log('Março');
+            break;
+        case 4:
+            console.log('Abril');
+            break;
+        case 5:
+            console.log('Maio');
+            break;
+        case 6:
+            console.log('Junho');
+            break;
+        case 7:
+            console.log('Julho');
+            break;
+        case 8:
+            console.log('Agosto');
+            break;
+        case 9:
+            console.log('Setembro');
+            break;
+        case 10:
+            console.log('Outubro');
+            break;
+        case 11:
+            console.log('Novembro');
+            break;
+        case 12:
+            console.log('Dezembro');
+            break;
+        case 0:
+            console.log('Saindo');
+            menu = false;
+            break;
+        default:
+            console.log('Mês inexistente');
+            break;
+    }
+}
+
+
+~
+
+import * as leitor from "readline-sync"
+
+let menu: Boolean = true
+while(menu){
+    let produto = leitor.questionInt("Informe o codigo do produto: \n1 - Camisa \n2 - Calça \n3 - Tenis \n0 - Sair \n: ");
+    switch(produto){
+        case 1:
+            console.log('Produto Selecionado: Camisa \nValor: R$150,00');
+            break;
+        case 2:
+            console.log('Produto Selecionado: Calça \nValor: R$250,00');
+            break;
+        case 3:
+            console.log('Produto Selecionado: Tenis \nValor: R$350,00');
+            break;
+        case 0:
+            console.log('Saindo...');
+            menu = false;
+            break;
+        default:
+            console.log('Produto inexistente');
+            break;
+    }
+}
+
+
+~
+
+
+import * as leitor from "readline-sync"
+
+let menu = true
+while(menu){
+    let teste = true
+    let nota = leitor.questionInt("Informe uma nota de 0 a 100 ou 101 para sair: ")
+    switch(teste){
+        case (nota <= 20):
+            console.log("Seu conceito é F :(");
+            break;
+        case (nota <= 40):
+            console.log("Seu conceito é D :/");
+            break;
+        case (nota <= 60):
+            console.log("Seu conceito é C :|");
+            break;
+        case (nota <= 80):
+            console.log("Seu conceito é B :)");
+            break;
+        case (nota <= 100):
+            console.log("Seu conceito é A :D");
+            break;
+        case (nota === 101):
+            console.log("Saindo...");
+            menu = false;
+            break;
+    }
+}
+
+
+~
+
+acabou switch case
+
+
+~
+
+aluno backend
+
+exportar classe Aluno{
+    nome: String;
+    notas: Matriz<número>;
+
+    construtor(nome: String){
+        este.nome = nome
+        isto.notas = []
+    }
+
+    setNotas(n1: número, n2: número, n3: número){
+        this.notas.push(n1)
+        this.notas.push(n2)
+        this.notas.push(n3)
+    }
+
+    getMedia(): número{
+        deixe media = (this.notas[0] + this.notas[1] + this.notas[2]) / 3
+        mídia de retorno
+    }
+}
+
+
+
+
+
+
+
+
+função principal(): void{
+    let aluno = cadastro()
+    console.log(aluno.getMedia());
+}
+
+function cadastro(): Aluno{
+
+    let nome = leitor.question("Insira o nome do aluno")
+    deixe aluno = novo Aluno(nome)
+    console.log("Aluno criado com sucesso!");
+
+    let n1 = leitor.questionFloat("Insira a nota 1: ")
+    let n2 = leitor.questionFloat("Insira a nota 2: ")
+    let n3 = leitor.questionFloat("Insira a nota 3: ")
+    aluno.setNotas(n1, n2, n3)
+    retornar aluno
+}
+
+principal()
+
+
+
+~
+
+biblioteca 
+
+importar * como leitor de "readline-sync"
+
+classe Livro{
+    id público: número
+    título público: string
+    autor público: string
+    public anoPublicacao: número
+    quantidade públicaDisponivel: número
+
+    construtor(id: número, título: string, autor: string, anoPublicacao: número, quantidadeDisponivel: número){
+        isto.id = id
+        this.titulo = titulo
+        este.autor = autor
+        this.anoPublicacao = anoPublicacao
+        this.quantidadeDisponivel = quantidadeDisponivel
+    }
+}
+
+classe Usuário{
+    id público: número
+    nome público: string
+    e-mail público: string
+    livros públicosEmprestados: Array<Livro>
+
+    construtor(id: número, nome: string, email: string){
+        isto.id = id
+        este.nome = nome        
+        este.e-mail = e-mail
+        this.livrosEmprestados = []
+    }
+}
+
+interfaceBiblioteca{
+    cadastrarLivro(): void
+    cadastrarUsuario(): void
+    emprestarLivro(): void
+    devolverLivro(): void
+    consultarLivrosDisponiveis(): void
+}
+
+classe de exportação SistemaBiblioteca implementa Biblioteca{
+
+    usuários privados: Array<Usuario>
+    livros privados: Array<Livro>
+
+    cadastro públicoLivro(): void {
+
+        let id = leitor.questionInt(`Informe o ID do livro: `)
+        let titulo = leitor.question(`Informe o título: `)
+        let autor = leitor.question(`Informe o autor: `)
+        let anoPublicacao = leitor.questionInt(`Informe o ano de publicação: `)
+        deixe quantidadeDisponivel = leitor.questionInt(`Informe a quantidade em estoque: `)
+
+        let livro = new Livro(id, titulo, autor, anoPublicacao, quantidadeDisponivel)
+
+        this.livros.push(livro)
+
+        console.log(`Livro cadastrado com sucesso!!`);
+
+    }
+
+    cadastro públicoUsuario(): void {
+
+        let id = leitor.questionInt(`Informe o ID do usuário a ser cadastrado: `)
+        let nome = leitor.question(`Informe o nome: `)         
+        let email = leitor.question(`Informe o email: `)
+
+        let usuario = new Usuario(id, nome, email)
+
+        this.usuários.push(usuário)
+
+        console.log(`Usuário cadastrado com sucesso!`);        
+
+    }
+
+    public emprestarLivro(): void {
+
+        this.usuarios.forEach(usuário => {
+            console.log(`Identificador: [${user.id}] - Nome: ${user.nome} \n`);
+        })
+
+        let idUser = leitor.questionInt(`Informe o ID do usuário: `)
+        deixe findUser = this.usuarios.findIndex(u => u.id === idUser)
+
+        this.livros.forEach(livro => {
+            console.log(`Identificador: [${book.id}] - Título: ${book.titulo} \n`);
+        })
+
+        let idBook = leitor.questionInt(`Informe do ID do Livro: `)
+        deixe findBook = this.livros.findIndex (l => l.id === idBook)
+
+        if (encontrarLivro && encontrarUsuário) {
+
+            if (this.usuarios[findUser].livrosEmprestados.length < 3 && this.livros[findBook].quantidadeDisponivel > 0) {
+
+                this.usuarios[findUser].livrosEmprestados.push(this.livros[findBook])
+                this.livros[findBook].quantidadeDisponivel -= 1
+
+                console.log(`Emprestimo do ${this.livros[findBook].titulo} para ${this.usuarios[findUser].nome} feito com sucesso!!`);                
+
+            } outro {
+
+                console.log(`Não foi possível emprestar ${this.livros[findBook].titulo} para ${this.usuarios[findUser].nome}`);                
+
+            }
+        } else if (!findBook || !findUser) {
+
+            console.log(`Usuário ou livro não encontrado`);
+
+        } outro {
+
+            console.log(`Ocorreu um erro, tente novamente.`);
+
+        }
+    }
+
+    public devolverLivro(): void {
+
+        this.usuarios.forEach(usuário => {
+            console.log(`Identificador: [${user.id}] - Nome: ${user.nome} \n`);
+        })
+
+        let idUser = leitor.questionInt(`Informe o ID do usuário: `)
+        deixe findUser = this.usuarios.findIndex(u => u.id === idUser)
+
+        if (encontrarUsuário) {
+
+            console.log(`Livros emprestados para esse usuário: `);        
+
+            this.usuarios[findUser].livrosEmprestados.forEach(livros =>{
+                console.log(`Identificador: [${books.id}] - Título: ${books.titulo} \n`);
+            })
+
+            let idBook = leitor.questionInt(`Informe o ID do livro para devolução: `)
+
+            deixe findBook = this.livros.findIndex (l => l.id === idBook)
+
+            if (encontrarLivro) {
+
+                this.usuarios[findUser].livrosEmprestados.splice(findBook, 1)
+                this.livros[findBook].quantidadeDisponivel += 1
+                console.log(`Livro de devolução com sucesso!!`);
+
+            } else if (!findBook) {
+
+                console.log(`Livro não encontrado`);
+
+            }
+
+        } else if (!findUser) {
+
+            console.log(`Usuário não encontrado`);
+
+        } outro {
+
+            console.log(`Ocorreu um erro, tente novamente!`);
+
+        }
+    }
+
+    public consultarLivrosDisponiveis(): void {
+
+        this.livros.forEach(livro => {
+            console.log(`Identificador: [${book.id}] - Título: ${book.titulo} \n`);
+        })
+
+    }
+
+    baseDadosLivros(){
+        let livroum = new Livro(1, "Dom Quixote", "Miguel de Cervantes", 1605, 5)
+        let livrodois = new Livro(2, "Em Busca do Tempo Perdido", "Marcel Proust", 1913, 7)
+        let livrotres = new Livro(3, "Crime e Castigo", "Fiódor Dostoiévski", 1866, 3)
+        let livroquatro = new Livro(4, "Cem Anos de Solidão", "Gabriel García Márquez", 1967, 8)
+        deixe livrocinco = novo Livro(5, "Orgulho e Preconceito", "Jane Austen", 1813, 10)
+        let livroseis = new Livro(6, "1984", "George Orwell", 1949, 2)
+        let livrosete = new Livro(7, "O Grande Gatsby", "F. Scott Fitzgerald", 1925, 6)
+        deixe livrooito = novo Livro(8, "Ulisses", "James Joyce", 1922, 4)
+        let livronove = new Livro(9, "Apanhador no Campo de Centeio", "JD Salinger", 1951, 9)
+        deixe livrodez = novo Livro(10, "A Metamorfose", "Franz Kafka", 1915, 1)
+        this.livros.push(livroum, livrodois, livrotres, livroquatro, livrocinco, livroseis, livrosete, livrooito, livronove, livrodez)
+    }
+
+    baseDadosUsuarios(){
+            let userum = new Usuario(1, "João Silva", "joao@gmail.com")
+            let userdois = new Usuario(2, "Maria Santos", "maria@gmail.com")
+            let usertres = new Usuario(3, "José Pereira", "jose@gmail.com")
+            let userquatro = new Usuario(4, "Ana Júlia", "ana@gmail.com")
+            let usercinco = new Usuario(5, "Paulo Lima", "paulo@gmail.com")
+            let usereis = new Usuario(6, "Camila Ferreira", "camila@hotmail.com")
+            let userete = new Usuario(7, "Fernando Alves", "fernando@hotmail.com")
+            let useroito = new Usuario(8, "Sofia Oliveira", "sofia@hotmail.com")
+            let usernove = new Usuario(9, "Lucas Rodrigues", "lucas@hotmail.com")
+            let userdez = new Usuario(10, "Mariana Pereira", "mariana@hotmail.com")
+            this.usuarios.push(userum, userdois, usertres, userquatro, usercinco, usereis, usersete, useroito, usernove, userdez)
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+importar { SistemaBiblioteca } de "./teste";
+importar * como leitor de "readline-sync"
+
+let biblioteca = new SistemaBiblioteca()
+biblioteca.baseDadosLivros()
+biblioteca.baseDadosUsuarios()
+
+enquanto(verdadeiro){
+    console.log(`Seja bem-vindo ao sistema de biblioteca!`);
+    console.log(`1 - Livro Cadastrar`);
+    console.log(`2 - Cadastrar Usuário`);
+    console.log(`3 - Emprestar Livro`);
+    console.log(`4 - Devolver Livro`);
+    console.log(`5 - Livros Disponíveis`);
+    console.log(`6 - Sair`);
+
+    let opcao = leitor.questionInt(`Informe a opção desejada: `)
+
+    switch (opção) {
+        caso 1:
+            biblioteca.cadastrarLivro()
+            quebrar;
+        caso 2:
+            biblioteca.cadastrarUsuario()
+            quebrar;
+        caso 3:
+            biblioteca.emprestarLivro()
+            quebrar;
+        caso 4:
+            biblioteca.devolverLivro()
+            quebrar;
+        caso 5:
+            biblioteca.consultarLivrosDisponiveis()
+            quebrar;
+        caso 6:
+            console.log(`Saindo, volte sempre.`);
+            processo.exit(0);
+        padrão:
+            console.log(`Opção inválida!\n`);
+            quebrar;
+    }
+
+}
+
+
+~
+
+
+biblioteca SQL
+
+importar * como leitor de "readline-sync"
+importar banco de "./db"
+
+classe Livro {
+    título: string
+    autor: string
+    anoPublicação: número
+    quantidadeDisponivel: número
+    construtor(titulo: string, autor: string, anoPublicacao: number, quantidadeDisponivel: number) {
+        this.titulo = titulo
+        este.autor = autor
+        this.anoPublicacao = anoPublicacao
+        this.quantidadeDisponivel = quantidadeDisponivel
+    }
+}
+
+class Usuário {
+    nome: string
+    e-mail: string
+    construtor(nome: string, email: string) {
+        este.nome = nome
+        este.e-mail = e-mail
+    }
+}
+/*
+interfaceBiblioteca{
+    cadastrarLivro(): void
+    cadastrarUsuario(): void
+    emprestarLivro(): void
+    devolverLivro(): void
+    consultarLivrosDisponiveis(): void
+}
+*/
+export class SistemaBiblioteca /*implementa Biblioteca*/{
+    usuários: Array<Usuario>
+    livros: Array<Livro>
+
+    construtor(){
+        this.usuários = []
+        isto.livros = []
+    }
+
+    cadastrarLivro(): void {
+            let titulo: string = leitor.question("Informe o título: ")
+            let autor: string = leitor.question("Informe o autor: ")
+            let anoPublicacao: number = leitor.questionInt("Informe o ano de publicação: ")
+            let quantidadeDisponivel: number = leitor.questionInt("Qual a quantidade disponível?")
+
+            let livro: Livro = new Livro(titulo, autor, anoPublicacao, quantidadeDisponivel)
+
+            this.criarLivroBanco(livro)
+    }
+
+    async criarLivroBanco(livro: Livro): Promise<void>{
+        tentar {
+            await executeDatabaseQuery(`INSERT INTO livros (titulo, autor, anoPublicacao, quantidadeDisponivel) VALUES (?, ?, ?, ?)`, [livro.titulo, livro.autor, livro.anoPublicacao, livro.quantidadeDisponivel])
+            console.log(`\nLivro: ${livro.titulo} inserido no BD com sucesso!`);
+        } pegar (errar) {
+            console.log('Erro: ', err);
+        }
+    }
+
+    cadastrarUsuario(): void {
+            deixe o nome: string = leitor.question("Informe o nome: ")
+            let email: string = leitor.question("Informe o email: ")
+
+            let usuario: Usuario = new Usuario(nome, email)
+            this.criarUsuarioBanco(usuário)
+    }
+
+    async criarUsuarioBanco(usuario: Usuario): Promise<void> {
+        tentar {
+            await executeDatabaseQuery(`INSERT INTO usuários (nome, email) VALUES (?, ?)`, [usuário.nome, usuário.email])
+            console.log(`\nUsuario: ${usuario.nome} inserido no BD com sucesso!`);
+        } pegar (errar) {
+            console.log("Erro: ", err);
+        }
+    }
+
+    async emprestarLivro(): Promise<void>{
+        aguarde isso.usuariosBanco()
+        let id_usuario = leitor.questionInt("Insira o ID do usuário: ")
+
+        aguarde isso.livrosBanco()
+        let id_livro = leitor.questionInt("Insira o ID do livro: ")
+
+        tentar {
+            //inserir o empresário
+            await executeDatabaseQuery(`INSERT INTO sistemabiblioteca(id_usuario, id_livro) VALUES (?, ?);`,[id_usuario, id_livro] )
+            //atualizar a quantidade disponível dos livros
+            await executeDatabaseQuery(`UPDATE livros SET quantidadeDisponivel = quantidadeDisponivel - 1 WHERE id_livro = ?`, [id_livro])
+            console.log("Livro emprestado com sucesso");
+
+        } pegar (errar) {
+            console.log("Erro: ", err);
+        }
+
+    }
+
+    async devolverLivro(): Promessa<void> {
+        aguarde isso.emprestimosBanco()
+        let idEmprestimo = leitor.questionInt("Insira o ID do emprestimo: ")
+
+        tentar {
+            console.log(await executeDatabaseQuery("SELECT id_livro FROM sistemabiblioteca WHERE id_biblioteca = ?", [idEmprestimo]))
+        } pegar (errar) {
+            console.log("Erro: ", err);
+        }
+
+        let idLivro = leitor.questionInt("Informe o ID do livro que foi mostrado acima para confirmar: ")
+
+        tentar {
+            // deletar os dados do emprestimo
+            aguardar executeDatabaseQuery(`DELETE FROM sistemabiblioteca WHERE id_biblioteca = ?`, [idEmprestimo])
+            //atualizar a quantidade em estoque do livro
+            await executeDatabaseQuery(`UPDATE livros SET quantidadeDisponivel = quantidadeDisponivel + 1 WHERE id_livro = ?`, [idLivro])
+        } pegar (errar) {
+            console.log("Erro: ", err);
+        }
+
+    }
+
+    async deletarUsuario(): Promessa<void>{
+        aguarde isso.usuariosBanco()
+        let id_usuario = leitor.questionInt("Informe o ID do usuário a ser excluído: ")
+
+        tentar {
+            await executeDatabaseQuery("DELETE FROM usuarios WHERE id_usuario = ?", [id_usuario])
+            console.log(`Usuário excluído com sucesso`);
+        } pegar (errar) {
+            console.log(`Erro: `, err);
+        }
+    }
+
+    async deletarLivro(): Promessa<void>{
+        aguarde isso.livrosBanco()
+        let id_livro = leitor.questionInt("Informe o ID do livro a ser excluído: ")
+
+        tentar {
+            aguarde executeDatabaseQuery("DELETE FROM livros WHERE id_livro = ?", [id_livro])
+            console.log(`Livro excluído com sucesso`);
+        } pegar (errar) {
+            console.log(`Erro: `, err);
+        }
+    }
+
+    // getters
+
+    async visualizarLivros(): Promise<void>{
+        aguarde isso.livrosBanco()
+    }
+
+    usuários assíncronosBanco(): Promise<void> {
+        tentar {
+            const usuários = await executeDatabaseQuery("SELECT * FROM usuários", [])
+            console.log('Base de dados de usuários: ');
+            return usuarios.forEach(({id_usuario, nome, email}: any) => {
+                console.log(`ID: ${id_usuario}, Nome: ${nome}, E-mail: ${email}`);
+            })
+        } pegar (errar) {
+            console.log("Erro: ", err);
+        }
+    }
+
+    async livrosBanco(): Promessa<void> {
+        tentar {
+            const livros = await executeDatabaseQuery("SELECT * FROM livros", [])
+            console.log(`Base de dados dos livros: `);
+            return livros.forEach(({id_livro, titulo, autor, quantidadeDisponivel}: any) => {
+                console.log(`ID: ${id_livro}, Título: ${titulo}, Autor: ${autor}, Quantidade Disponivel: ${quantidadeDisponivel}`);
+
+            })            
+        } pegar (errar) {
+            console.log("Erro: ", err);
+        }
+    }
+
+    async emprestimosBanco(): Promise<void>{
+        tentar {
+            const empresários = aguarda executeDatabaseQuery(`
+            SELECT sistemabiblioteca.id_biblioteca, usuarios.nome, livros.titulo
+            DE sistemabiblioteca
+            INNER JOIN usuários ON usuarios.id_usuario = sistemabiblioteca.id_usuario
+            INNER JOIN livros ON livros.id_livro = sistemabiblioteca.id_livro
+            `, [])
+
+            console.log(`Livros emprestados: `);
+            emprestimos.forEach(({id_biblioteca, nome, titulo}: any) =>{
+                console.log(`ID do Emprestimo: ${id_biblioteca}, Usuario: ${nome}, Livro: ${titulo}`);
+            })
+        } pegar (errar) {
+            console.log("Erro: ", err);
+        }
+    }
+
+
+
+}
+
+função assíncrona executeDatabaseQuery(query: string, params: any[]): Promise<any> {
+    tentar {
+        const resultado = aguarda banco.execute(query, params)
+        resultado de retorno
+    } pegar (errar) {
+        console.error('Erro na execução da consulta', err);
+        lançar errar
+    }
+}
+
+
+
+_____________________________________________________
+
+
+
+var mariadb = require("mariadb")
+
+const banco = mariadb.createPool({
+    hospedeiro: 'localhost',
+    usuário: 'root',
+    senha: '',
+    porta: 5000,
+    base de dados: 'biblioteca',
+    waitForConnections: verdadeiro,
+    limite de conexão: 10
+})
+
+exportar banco padrão;
+
+banco.execute(`
+    CRIAR BANCO DE DADOS SE NÃO EXISTIR biblioteca;
+`)
+
+banco.execute(`
+    CRIAR TABELA SE NÃO EXISTIR livros(
+        id_livro INT CHAVE PRIMÁRIA AUTO_INCREMENT,
+        título VARCHAR(50) NÃO NULO,
+        autor VARCHAR(50) NOT NULL,
+        anoPublicacao INT NOT NULL,
+        quantidadeDisponivel INT NOT NULL
+    );
+`)
+
+banco.execute(`
+    CRIAR TABELA SE NÃO EXISTIR usuarios(
+        id_usuario INT CHAVE PRIMÁRIA AUTO_INCREMENT,
+        nome VARCHAR(50) NOT NULL,
+        e-mail VARCHAR(50) NÃO NULO
+    );   
+`)
+
+banco.execute(`
+    CRIAR TABELA SE NÃO EXISTIR sistemabiblioteca(
+        id_biblioteca INT CHAVE PRIMÁRIA AUTO_INCREMENT,
+        id_usuario INT NÃO NULO,
+        id_livro INT NÃO NULO,
+        CHAVE ESTRANGEIRA (id_usuario) REFERÊNCIAS usuarios(id_usuario) EM DELETE CASCADE,
+        CHAVE ESTRANGEIRA (id_livro) REFERÊNCIAS livros(id_livro)
+    );   
+`)
+___________________________________________________________________
+
+
+
+
+importar { SistemaBiblioteca } de "./Classes";
+importar * como leitor de "readline-sync"
+
+principal()
+
+função assíncrona main() {
+
+    enquanto (verdadeiro) {
+
+        const biblioteca = new SistemaBiblioteca()
+
+        console.log(`Seja bem-vindo ao sistema de biblioteca!`);
+        console.log(`1 - Livro Cadastrar`);
+        console.log(`2 - Cadastrar Usuário`);
+        console.log(`3 - Emprestar Livro`);
+        console.log(`4 - Devolver Livro`);
+        console.log(`5 - Livros Disponíveis`);
+        console.log(`6 - Excluir usuário`);
+        console.log(`7 - Deletar Livros`);
+        console.log(`0 - Sair`);
+
+
+        let opcao = leitor.questionInt(`Informe a opção desejada: `)
+
+        switch (opção) {
+            caso 1:
+                aguarde biblioteca.cadastrarLivro()
+                quebrar;
+            caso 2:
+                aguarde biblioteca.cadastrarUsuario()
+                quebrar;
+            caso 3:
+                aguarde biblioteca.emprestarLivro()
+                quebrar;
+            caso 4:
+                aguarde biblioteca.devolverLivro()
+                quebrar;
+            caso 5:
+                aguardar biblioteca.visualizarLivros()
+                quebrar;
+            caso 6:
+                aguarde biblioteca.deletarUsuario()
+                quebrar;
+            caso 7:
+                aguarde biblioteca.deletarLivro()
+                quebrar;
+            caso 0:
+                console.log(`Saindo, volte sempre.`);
+                processo.exit(0);
+            padrão:
+                console.log(`Opção inválida!\n`);
+                quebrar;
+        }
+
+    }
+}
+
+
+~
+
+codigos SQL 
+
+CREATE TABLE medicamentos (
+id_medicamento INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR (50) NÃO NULO,
+preco INT NOT NULL,
+estoque INT NÃO NULO
+)
+
+
+
+INSERT INTO medicamentos (nome, preço, estoque)
+VALORES
+('dramin', 15, 6),
+('rivrotil' ,60 , 5),
+('dorflerx', 20,5);
+
+
+
+SELECIONE * DE medicamentos
+SELECIONE o nome FROM medicamentos
+SELECIONE nome, preço FROM medicamentos
+
+
+~
+
+CREATE TABLE SistemaFarmacia(
+	id_farmacia INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	id_medicamento INT NOT NULL,
+	id_usuario INT NOT NULL,
+	FOREIGN KEY (id_medicamento) REFERENCES medicamentos(id_medicamento),
+	FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+);
+
+
+
+
+
+INSERT INTO sistemafarmacia(id_medicamento,id_usuario)
+VALUES
+(1,1),
+(2,2),
+(3,3);
+
+
+
+
+///
+
+
+SELECT usuario.nome, medicamentos.nome
+FROM sistemafarmacia
+INNER JOIN usuario ON usuario.id_usuario = sistemafarmacia.id_usuario
+INNER JOIN medicamentos ON medicamentos.id_medicamento = sistemafarmacia.id_medicamento;
+
+SELECT id_usuario, id_medicamento FROM sistemafarmacia;
+
+
+
+~
+
+
+FARMACIA
+
+importar * como leitor de "readline-sync"
+
+classe Medicamento{
+    nome público: String;
+    público qtdEstoque: número;
+    preço público: número;
+
+    construtor(nome: String, qtdEstoque: número, preço: número){
+        este.nome = nome
+        this.preco = preco
+        this.qtdEstoque = qtdEstoque
+    }
+}
+
+classe de exportação Farmacia{
+    medicamentos públicos: Array<Medicamento>
+
+    construtor(){
+        this.medicamentos = []
+    }
+
+    public vendaMedicamentos(): void{
+        let nome = leitor.question("Informe o nome do remédio para vender: ")
+        let qtd = leitor.questionInt("Informe a quantidade: ")
+        const medicamento = this.medicamentos.find(m => m.nome === nome)
+        if (medicamento) {
+            if(medicamento.qtdEstoque >= qtd) {
+                medicamento.qtdEstoque -= qtd
+                console.log(`Venda realizada: ${qtd} unidades de ${medicamento.nome}`);
+            } outro {
+                console.log(`Estoque insuficiente para a venda de ${qtd} unidades de ${medicamento.nome}`);
+            }
+        } outro {
+            console.log(`Medicamento ${nome} não encontrado!`);
+        }
+    }
+
+    // setters dos medicamentos
+    public comprarMedicamento(): void{
+        let nome = leitor.question("Informe o nome do medicamento que será adquirido: ");
+        let qtd = leitor.questionInt("A quantidade a ser comprada: ");
+        let preço = leitor.questionInt("Informe o valor do medicamento: ");
+        const medicamento = this.medicamentos.find(m => m.nome === nome)
+        if (medicamento) {
+            medicamento.qtdEstoque += qtd;
+            medicamento.preco = preço
+        } outro {
+            const novoMedicamento = new Medicamento(nome, qtd, preço);
+            this.medicamentos.push(novoMedicamento);
+        }
+        console.log(`Compra realizada ${qtd} unidades de ${nome}`);
+    }
+
+    public inserirMedicamento(): void{
+        let nome = leitor.question("Informe o nome do medicamento que será inserido: ");
+        let qtd = leitor.questionInt("A quantidade a ser inserida: ");
+        let preço = leitor.questionInt("Informe o valor do medicamento: ");
+        const novoMedicamento = new Medicamento(nome, qtd, preço);
+        this.medicamentos.push(novoMedicamento);
+        console.log(`Medicamento ${novoMedicamento.nome} inserido no estoque`);
+    }
+
+    public removeMedicamento(): void{
+        let nome = leitor.question("Informe o nome do medicamento que será removido: ");
+        const index = this.medicamentos.findIndex(m => m.nome === nome)
+        se (índice){
+            this.medicamentos.splice(índice, 1)
+            console.log(`Medicamento ${nome} removido do estoque`);            
+        } outro {
+            console.log(`Medicamento ${nome} não removido do estoque, verifique o nome informado`);
+        }
+    }
+
+    public substituirMedicamento(): void{
+        let nomeAntigo = leitor.question("Insira o nome do remédio a ser substituído: ");
+
+        const medicamentoAntigo = this.medicamentos.find((m) => m.nome === nomeAntigo)
+
+        if (medicamentoAntigo) {
+            //remove o remédio antigo
+            const index = this.medicamentos.findIndex(m => m.nome === nomeAntigo)
+            this.medicamentos.splice(índice, 1)
+
+            //inserir remédio novo
+            let nomeNovo = leitor.question("Insira o nome do remédio a ser inserido no estoque: ");
+            let qtd = leitor.questionInt("A quantidade a ser inserida: ");
+            let preço = leitor.questionInt("Informe o valor do medicamento: ");
+            const medicamentoNovo = novo Medicamento(nomeNovo, qtd, preco)
+            this.medicamentos.push(medicamentoNovo)
+            console.log("Substituição realizada!");
+        } outro {
+            console.log("Medicamento não encontrado para remoção");
+        }
+
+    }
+
+    //obter medicamentos:
+    public visualizarEstoque(): void{
+        console.log('Estoque de medicamento:');
+        this.medicamentos.forEach((medicamento) => {
+            console.log(`Nome: ${medicamento.nome}`);
+            console.log(`Quantidade: ${medicamento.qtdEstoque}`);
+            console.log(`Preço: ${medicamento.preco}`);
+        })
+    }
+}
+
+
+
+
+
+
+
+
+
+
+importar { Farmacia } de "./Classes";
+importar * como leitor de "readline-sync"
+
+const farmácia = new Farmacia()
+
+enquanto(verdadeiro){
+    console.log(`Selecione uma opção: `);
+    console.log(`1 - Vendedor de Medicamentos`);
+    console.log(`2 - Comprar Medicamentos`);
+    console.log(`3 - Substituir Medicamento`);
+    console.log(`4 - Removedor de Medicamentos`);
+    console.log(`5 - Inserir Medicamento`);
+    console.log(`6 - Visualizar Estoque`);
+    console.log(`7 - Sair`);
+    let option = leitor.questionInt("Digite o número desejado: ")
+
+    mudar(opção){
+        caso 1:
+            farmacia.vendaMedicamentos();
+            quebrar;
+        caso 2:
+            farmacia.comprarMedicamento();
+            quebrar;
+        caso 3:
+            farmacia.substituirMedicamento();
+            quebrar;
+        caso 4:
+            farmacia.removerMedicamento();
+            quebrar;
+        caso 5:
+            farmacia.inserirMedicamento();
+            quebrar;
+        caso 6:
+            farmacia.visualizarEstoque();
+            quebrar;
+        caso 7:
+            console.log("Saindo...");
+            processo.exit(0);
+        padrão:
+            console.log("Opção inválida, tente novamente");
+    }
+}
+
+
+~
+
+FARMACIA SQL
+
+import * as leitor from "readline-sync"
+import banco from "./db"
+
+export class Farmacia{
+    //getters
+
+    async getMedicamentos(): Promise<string>{
+        try {
+            let getRemedios = await executarBanco(`SELECT * FROM medicamentos`, [])
+            console.log(`\nLista de remédios: `);
+            return getRemedios.forEach(({id_medicamento, nome_medicamento, quantidadeEmEstoque, precoPorUnidade}: any) => {
+                console.log(`ID: ${id_medicamento}`);
+                console.log(`Nome: ${nome_medicamento}`);
+                console.log(`Qtd. em Estoque: ${quantidadeEmEstoque}`);
+                console.log(`Preco: ${precoPorUnidade}\n`);
+            });
+        } catch (error) {
+            return `Erro: ${error}`
+        }
+    }
+    async getClientes(): Promise<string>{
+        try {
+            let getClientes = await executarBanco(`SELECT * FROM clientes`, [])
+            console.log(`\nLista de clientes: `);
+            return getClientes.forEach(({id_cliente, nome_cliente, documento}: any) => {
+                console.log(`ID: ${id_cliente}`);
+                console.log(`Nome: ${nome_cliente}`);
+                console.log(`Documento (RG ou CPF): ${documento}`);
+            });
+        } catch (error) {
+            return `Erro: ${error}`
+        }
+    }
+    async getVendas(): Promise<string>{
+        try {
+            let getVendas = await executarBanco(`
+            SELECT vendas.id_venda, clientes.nome_cliente, medicamentos.nome_medicamento
+            FROM vendas
+            INNER JOIN clientes ON clientes.id_cliente = vendas.id_cliente
+            INNER JOIN medicamentos ON medicamentos.id_medicamento = vendas.id_medicamento
+            `, [])
+            console.log(`\nLista de clientes: `);
+            return getVendas.forEach(({id_venda, nome_cliente, nome_medicamento}: any) => {
+                console.log(`ID da Venda: ${id_venda}`);
+                console.log(`Nome do Cliente: ${nome_cliente}`);
+                console.log(`Nome do Medicamento: ${nome_medicamento}`);
+            });
+        } catch (error) {
+            return `Erro: ${error}`
+        }
+    }
+    async getEstoque(): Promise<string>{
+        try {
+            let getEstoque = await executarBanco(`SELECT nome_medicamento, quantidadeEmEstoque FROM medicamentos`, [])
+            console.log(`\nEstoque: `);
+            return getEstoque.forEach(({nome_medicamento, quantidadeEmEstoque}: any) => {
+                console.log(`Medicamento: ${nome_medicamento}`);
+                console.log(`Qt.: ${quantidadeEmEstoque}`);
+            });
+        } catch (error) {
+            return `Erro: ${error}`
+        }
+    }
+
+    //setters
+
+    async setMedicamentos(): Promise<void>{
+        let nome_medicamento = leitor.question("Informe o nome do medicamento: ").toUpperCase()
+        let quantidadeEmEstoque = leitor.questionInt("Informe a quantidade de medicamento que será inserida: ")
+        let precoPorUnidade = leitor.questionFloat("Informe o preço da unidade do medicamento: ")
+        try {
+            await executarBanco(`
+            INSERT INTO medicamentos(nome_medicamento, quantidadeEmEstoque, precoPorUnidade) 
+            VALUES (?, ?, ?)`, 
+            [nome_medicamento, quantidadeEmEstoque, precoPorUnidade])
+        } catch (error) {
+            console.error(`Erro: ${error}`);
+        }
+    }
+
+    async setClientes(): Promise<void>{
+        let nome_cliente = leitor.question("Informe o nome do cliente: ").toUpperCase()
+        let documento = leitor.question("Informe o documento do cliente (RG ou CPF): ")
+        try {
+            await executarBanco(`
+            INSERT INTO clientes(nome_cliente, documento)
+            VALUES (?, ?)`, 
+            [nome_cliente, documento])
+        } catch (error) {
+            console.error(`Erro: ${error}`);
+        }
+    }
+
+    async setVendas(): Promise<void>{
+        await this.getMedicamentos()
+        let id_medicamento = leitor.questionInt("Informe o id do medicamento selecionado: ")
+        await this.getClientes()
+        let id_cliente = leitor.questionInt("Informe o id do cliente selecionado: ")
+        try {
+            await executarBanco(`INSERT INTO vendas(id_medicamento, id_cliente) VALUES (?, ?)`, [id_medicamento, id_cliente])
+        } catch (error) {
+            console.error(`Erro: ${error}`);
+        }        
+    }
+
+    //deletions
+
+    async deleteMedicamento(): Promise<void>{
+        await this.getMedicamentos()
+        let id_medicamento = leitor.questionInt(`Insira o ID do medicamento a ser deletado: `)
+        try {
+            await executarBanco(`DELETE FROM medicamentos WHERE id_medicamento = ?`, [id_medicamento])
+            console.log(`Medicamento deletado.`);
+        } catch (error) {
+            console.error(`Erro: ${error}`);
+        }
+    }
+
+    async deleteCliente(): Promise<void>{
+        await this.getClientes()
+        let id_cliente = leitor.questionInt(`Insira o ID do cliente a ser deletado: `)
+        try {
+            await executarBanco(`DELETE FROM clientes WHERE id_cliente = ?`, [id_cliente])
+            console.log(`Cliente deletado.`);
+        } catch (error) {
+            console.error(`Erro: ${error}`);
+        }
+    }
+
+    // função de substituição de medicamentos
+    async substituicao(): Promise<void>{
+        await this.deleteMedicamento()
+        await this.setMedicamentos()
+    }
+
+}
+
+async function executarBanco(query: string, params: any[]) {
+    try {
+        const result = await banco.execute(query, params)
+        return result
+    } catch (error) {
+        console.error('Erro na execucao da consulta', error)
+        throw error
+    }
+}
+
+
+
+--------------------------------------------------------
+
+
+
+import { Farmacia } from "./farmacia";
+import * as leitor from "readline-sync"
+
+const farmacia = new Farmacia()
+
+async function main() {
+  while(true){
+    console.log(`\nMenu`);
+    console.log(`1 - Listar Medicamentos`);
+    console.log(`2 - Listar Clientes`);
+    console.log(`3 - Listar Vendas`);
+    console.log(`4 - Listar Estoque`);
+    console.log(`5 - Cadastrar Medicamento`);
+    console.log(`6 - Cadastrar Cliente`);
+    console.log(`7 - Realizar Venda`);
+    console.log(`8 Substituir Medicamento`);
+    console.log(`9 - Deletar Cliente`);
+    console.log(`10 - Deletar Medicamento`);
+    console.log(`0 - Sair`);
+    
+    let escolha = leitor.questionInt("Escolha uma opcao: ")
+
+    switch(escolha){
+        case 1:
+            await farmacia.getMedicamentos()
+            break;
+        case 2:
+            await farmacia.getClientes()
+            break;
+        case 3:
+            await farmacia.getVendas()
+            break;
+        case 4:
+            await farmacia.getEstoque()
+            break;
+        case 5:
+            await farmacia.setMedicamentos()
+            break;
+        case 6:
+            await farmacia.setClientes()
+            break;
+        case 7:
+            await farmacia.setVendas()
+            break;
+        case 8:
+            await farmacia.substituicao()
+            break;
+        case 9:
+            await farmacia.deleteCliente()
+            break;
+        case 10:
+            await farmacia.deleteMedicamento()
+            break;
+        case 0:
+            console.log(`Saindo! Até logo.`);
+            process.exit(0)
+        default:
+            console.log(`Opcao invalida`);
+    }
+  }
+}
+
+main()
+
+
+~
+
+FUNCIONARIO
+
+export class Funcionario{
+    protected nome: string;
+    protected idade: number;
+    protected salario: number;
+
+    constructor(nome: string, idade: number, salario: number){
+        this.idade = idade
+        this.nome = nome
+        this.salario = salario
+    }
+
+    exibirDetalhes(): void{
+        console.log(`Nome: ${this.nome}`);
+        console.log(`Idade: ${this.idade}`);
+        console.log(`Salario: ${this.salario}`);
+    }
+}
+
+export class Vendedor extends Funcionario{
+    private comissao: number;
+
+    constructor(nome: string, idade: number, salario: number, comissao: number){
+        super(nome, idade, salario)
+        this.comissao = comissao
+    }
+
+    calcularSalario(){
+        this.salario += this.comissao
+    }
+
+    exibirDetalhes(): void{
+        super.exibirDetalhes()
+        console.log(`Comissão: ${this.comissao}`);
+    }
+
+}
+
+
+
+import { Funcionario, Vendedor } from "./Classes";
+
+const funcionarioum = new Funcionario("João", 30, 3000);
+const vendedorum = new Vendedor("Mario", 25, 3000, 500);
+
+console.log(`Detalhes do funcionário padrão: `);
+funcionarioum.exibirDetalhes()
+
+console.log(`Detalhes do vendedor: `);
+vendedorum.calcularSalario()
+vendedorum.calcularSalario()
+vendedorum.calcularSalario()
+vendedorum.calcularSalario()
+vendedorum.calcularSalario()
+vendedorum.exibirDetalhes()
+
+~
+
+LOJA
+
+importar * como leitor de "readline-sync"
+
+classe de exportação Loja{
+    nome: String;
+    endereco: String;
+    produtos: Array<String>;
+
+    construtor(nome: String, endereco: String){
+        este.nome = nome
+        this.endereco = endereco
+        este.produtos = []
+    }
+
+    setProdutos(){
+        let nome = leitor.question("Informe o nome do produto: ")
+        let marca = leitor.question("Informe a marca do produto: ")
+        let produto = "Nome: "+ nome +", Marca: " + marca
+        this.produtos.push(produto)
+        console.log(`O produto: ${produto} foi adicionado no estoque.`);
+    }
+
+    removedorProdutos(){
+        let removedor = leitor.question("Informe o nome do produto para remover")
+        deixe index = this.produtos.indexOf(removedor)
+        this.produtos.splice(índice, 1)
+    }
+
+    getProdutos(){
+        console.log(this.produtos);
+    }
+
+}
+
+
+
+
+
+
+importar { Loja } de "./Loja";
+importar * como leitor de "readline-sync"
+let loja = new Loja("Loja 3KTI", "SENAC Centro")
+deixe menu = verdadeiro
+enquanto(menu){
+    let opt ​​= leitor.questionInt("Digite: \n1 - Verificar produtos \n2 - Inserir produtos \n3 - Remover produtos \n4 - Sair \n:")
+    mudar(optar){
+        caso 1:
+            loja.getProdutos()
+            quebrar
+        caso 2:
+            loja.setProdutos()
+            quebrar
+        caso 3:
+            loja.removerProdutos()
+            quebrar
+        caso 4:
+            console.log("Saindo.")
+            menu = falso
+            quebrar
+    }
+}
+
+~
+
+CARROS
+
+exportar classe carro {
+    consumo:número;
+    marca: String;
+    modelo: String;
+    ano: número;
+    combustível: número = 0;
+
+
+    construtor(consumo: number , marca : String , modelo :String , ano: number){
+        this.consumo=consumo;
+        this.marca=marca;
+        este.modelo=modelo;
+        este.ano=ano;
+        this.combustivel= consumo = 0;
+
+
+    }  
+andar (km : número ): void {
+    deixe viajar = km/ this.consumo
+    if(viajar < this.combustivel){
+        console.log("não é possível fazer essa viagem, abasteça seu carro !");
+
+    }outro{
+        this.combustivel -= viajar
+        console.log(`sobrou ${this.combustivel} litros de gasolina `);
+
+    }
+}
+
+//setCombustiveç
+abastecer (gasolina: número): void {
+    this.combustivel += gasolina
+    console.log(`seu tanque esta com ${this.combustivel }litros de gasolina `);
+
+}
+//getCombustivel
+checarTanque (gasolina : número): void {
+    console.log(`seu tanque esta com ${this.combustivel }litros de gasolina `);
+}
+getValues():void{{
+    console.log(`seu carro faz : ${ this.consumo} por litro `);
+    console.log(`a marca do seu carro e :${ this.marca} `);
+    console.log(`o modelo do seu carro e : ${ this.modelo}`);
+    console.log(`o ano do seu carro e :${this.ano}`);
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+importar { Carro } de "./Carro"
+importar * como leitor de "readline-sync"
+deixe menu: Boolean = true
+
+// Base de dados de Carros:
+
+deixe camaro = novo Carro(8, "Chevrolet", "Camaro", 2019);
+deixe corsa = novo Carro(15, "Chevrolet", "Corsa", 1999);
+deixe fusca = novo Carro(10, "Volkswagen", "Fusca", 1980);
+deixe monza = novo Carro(13, "Chevrolet", "Monza", 1990);
+deixe lancer = novo Carro(11, "Mitsubishi", "Lancer Evolution", 2020);
+deixe civic = novo Carro(13, "Honda", "Civic", 2018);
+deixe corolla = novo Carro(12, "Toyota", "Corolla", 2020);
+deixar = novo Carro(15, "Volkswagen", "UP", 2017);
+deixe foco = new Carro(12, "Ford", "Focus", 2012);
+deixe vectra = novo Carro(10, "Chevrolet", "Vectra", 2005);
+
+let carro: Array<Carro> = [camaro, corsa, fusca, monza, lancer, civic, corolla, up, focus, vectra]
+deixe carroEscolhido;
+
+
+enquanto(menu){
+    let option = leitor.questionInt("Selecione uma opção: \n1 - Ver base de dados \n2 - Escolher carro \n3 - Sair \n:");
+    mudar(opção){
+        caso 1:
+            console.log(carro);
+            quebrar;
+        caso 2:
+            let nome = leitor.question("Digite o nome do carro: ");
+            for(seja i = 0; i < carro.length; i++){
+                if(nome === carro[i].modelo.toLowerCase()){
+                    carroEscolhido = carro[i];
+                    carroEscolhido.getValues();
+                }
+            }
+            deixe menu2: Boolean = true;
+            enquanto(menu2){
+                let opt ​​= leitor.questionInt("1 - Abastecer \n2 - Viajar \n3 - Voltar ao menu principal \n:");
+                mudar(optar){
+                    caso 1:
+                        let gasolina = leitor.questionInt("Qual a quantidade de gasolina? ");
+                        carroEscolhido.abastecer(gasolina);
+                        quebrar;
+                    caso 2:
+                        let kms = leitor.questionInt("Qual a distância que você vai percorrer, em kms ");
+                        carroEscolhido.viajar(kms);
+                        quebrar;
+                    caso 3:
+                        console.log("Retornando ao menu principal!");
+                        menu2 = falso;
+                        quebrar;
+                }
+            }
+            quebrar;
+        caso 3:
+            console.log("Saindo do sistema");
+            menu = falso;
+            quebrar;       
+    }   
+}
+
+
+
